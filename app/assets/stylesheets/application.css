@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+ @media screen and (min-width: 800px) {
+    body {
+      background-color: lemonchiffon;
+    }
+  }
+  /* Mid View */
+  @media screen and (min-width: 450px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+  /* Mobile  */
+  @media screen and  (min-width: 200px) {
+    body {
+      background-color: black;
+    }
+  }
+
+
+
