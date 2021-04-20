@@ -9,23 +9,46 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="../../assets/stylesheets/users.scss">
     </head>
-    <body style="">
- 
-<div class="authBox">
+    <body style="padding:1em;background-size:cover;background-color:black;font-family:serif;">
+            <%
+=begin%>
+ <img style="width:100%;"src="https://images.unsplash.com/photo-1517817748493-49ec54a32465?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bm90ZXN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"> 
+<%
+=end%>
+
+
+
+
+<!-- Button trigger modal -->
+<button id="lander" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<h3>Click To Enter</h3>
+  <img src="https://images.squarespace-cdn.com/content/v1/58cc759a197aea52162f3867/1555379065109-RDZST6IY1C8KZQJUA11Z/ke17ZwdGBToddI8pDm48kLfjbqhJqe_W0sOXBssOHExZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7TKS1GRYMpVo7x3dbh80XXKd5U7qNi8VJ4dybWOAEqRVZMZLQBvfGckauOrWP9pKNw/girl-with-the-pearl-earring-2.gif">
+  <h1>Sketchers Anonymous</h1>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+   <div class="authBox">
+<div class="halfTop">
     <p class="mTitle"> Member Login</p>
-    <div>
         <form action="/sessions" method="POST">
             <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
             <input type="email" name="login[email]"placeholder="email">
             <input type="password" name="login[password]"placeholder="password"><br>
             <input id="btnSubmit"type="submit" name="submit"class="submit">
         </form>
-    </div>
+</div>
+<hr>
       
-      
-            <img style="width:100%;"src="">
-
  <div>
+ <div class="halfTop">
      <p class="mTitle">First Time User? Register Below</p>
   <form action="/users" method="POST">
             <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
@@ -35,8 +58,27 @@
             <input type="password" name="user[password_confirmation]"placeholder="Confirm Password"><br>
             <input id="btnSubmit"type="submit" name="submit"class="submit">
         </form>
+    </div>
 </div>
-       
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>

@@ -22,3 +22,47 @@
       background-color: black;
     }
   }
+
+  .authBox{
+    // background-color:grey;
+    display:flex;
+  }
+  input{
+    background-color:#333C3F;
+    text-align:center;
+    margin:12px;
+    width:100%;
+
+  }
+  .mTitle{
+    // border:solid red;
+    text-align:center;
+    color:lemonchiffon;
+    border-width:.2px;
+  }
+  .mainNotes{
+    border:solid red;
+    height:32vh;
+    // background-image:url('https://cdn.wallpapersafari.com/98/95/XUYh7H.jpeg');
+  }
+  .halfTop{
+    // border:solid green;
+    margin:3px;
+    padding:1em;
+  }
+  #btnSubmit{
+    color:white;
+    background-color:green;
+  }
+  .modal-body, .modal-header{
+    color: lemonchiffon;
+    background-color: black;
+    
+  }
+  #lander{
+    margin:22%;
+  }
+  #lander:hover{
+    -webkit-box-shadow: 3px 5px 8px 2px #3B95FF; 
+    box-shadow: 3px 5px 8px 2px #3B95FF;
+  }
