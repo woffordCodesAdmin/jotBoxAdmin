@@ -83,7 +83,7 @@
     border-width:.2px;
     height:23vh;
     justify-content: space-between;
-    display:flex;
+    // display:flex;
   }
   .proBox{
     // border:solid lime;
@@ -148,7 +148,7 @@
 .motto{
   font-family: cursive;
   color:grey;
-  animation: rookieMove ease-in 8s infinite;
+  animation: rookieMove ease-in 18s infinite;
 }
 .btnHold{
   border:solid red;
@@ -184,3 +184,9 @@ table{
   width:100%;
 }
 
+.actNput{
+  width:100%;
+}
+.flexer{
+  display:flex;
+}

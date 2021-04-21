@@ -14,7 +14,7 @@
     <div class="profileContainer">
         <h3 class="profileTxtMain"> Welcome To Your [Note] Dashboard</h3>
         <p class="motto">...its your idea ., just write it down. </p>
-        <img style="width:100%;height:auto;" src="https://images.unsplash.com/photo-1612641605722-60c66c66530c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNrZXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+        <img style="border:solid lemonchiffon;border-width:.2px;width:100%;height:auto;" src="https://images.unsplash.com/photo-1612641605722-60c66c66530c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNrZXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
         
         <div class="greatContainer">
         <h3 > Note(s) Ledger </h3>
@@ -29,8 +29,7 @@
             <th colspan="3"></th>
             </tr>
         </thead>
-
-        <tbody>
+    <tbody>
             <% @posts.each do |post| %>
             <tr>
                 <td><%= post.title %></td>
@@ -44,13 +43,14 @@
         </tbody>
         </table>
 </div>
-
                 <div class="innerContainer">
-                    <div id="a"class="proBox"> <h5 class="phead">Urgent</h5></div>
-                    <img  style="margin-top:4%;height:90px;"src="https://cdna.artstation.com/p/assets/images/images/020/518/064/original/christopher-royse-deskmate-pencils-icon-hi-res.gif?1568088122">
-                    <div  id="c" class="proBox"> <h5 class="phead">Random </h5></div>
-                </div>
 
+                    </div>
+                </div>
+                <div class="flexer">
+                    <div  id="c" class="proBox"> <h5 class="phead">Set Deadline</h5></div>
+                    <div  id="a" class="proBox"> <h5 class="phead">Set Active Item Alarm</h5></div>
+                </div>
             <div onclick="addNote()" class="actionBtn"><%= link_to 'Create Note', new_post_path %></div>
     </div>
 </div>
