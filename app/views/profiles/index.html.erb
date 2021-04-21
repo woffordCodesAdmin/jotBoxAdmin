@@ -12,46 +12,45 @@
     <body style="background-size:cover;background-color:black;font-family:serif;">
     
     <div class="profileContainer">
-        <h3 class="profileTxtMain"> Welcome To Your [Note] Dashboard</h3>
-        <p class="motto">...its your idea ., just write it down. </p>
-        <img style="border:solid lemonchiffon;border-width:.2px;width:100%;height:auto;" src="https://images.unsplash.com/photo-1612641605722-60c66c66530c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNrZXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-        
-        <div class="greatContainer">
-        <h3 > Note(s) Ledger </h3>
+            <h3 class="profileTxtMain"> Welcome To Your [Note] Dashboard</h3>
+            <p class="motto">...its your idea ., just write it down. </p>
+            <img style="border:solid lemonchiffon;border-width:.2px;width:100%;height:auto;" src="https://images.unsplash.com/photo-1612641605722-60c66c66530c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNrZXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            <div class="greatContainer">
+            <h3 style="color:salmon;text-align:right;" > Note(s) Ledger </h3>
 
-        <table>
-        <thead>
-            <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Date</th>
-            <th>Body</th>
-            <th colspan="3"></th>
-            </tr>
-        </thead>
-    <tbody>
-            <% @posts.each do |post| %>
-            <tr>
-                <td><%= post.title %></td>
-                <td><%= post.author %></td>
-                <td><%= post.date %></td>
-                <td><%= post.body %></td>
-                <td><%= link_to 'Edit', edit_post_path(post) %></td>
-                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-            <% end %>
-        </tbody>
-        </table>
+            <table>
+            Registered Notes
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Body</th>
+                <th colspan="3"></th>
+                </tr>
+            </thead>
+        <tbody>
+                <% @posts.each do |post| %>
+                <tr>
+                    <td style="border:solid lemonchiffon;border-width:.2px;"><%= post.title %></td>
+                    <td style="border:solid lemonchiffon;border-width:.2px;"><%= post.author %></td>
+                    <td style="border:solid lemonchiffon;border-width:.2px;"><%= post.date %></td>
+                    <td style="border:solid lemonchiffon;border-width:.2px;"><%= post.body %></td>
+                    <td><%= link_to '[^]', edit_post_path(post) %></td>
+                    <td><%= link_to '[X]', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+                <% end %>
+            </tbody>
+            </table>
+        </div>
+         <div class="innerContainer"></div>
 </div>
-                <div class="innerContainer">
+            <div onclick="addNote()" class="actionBtn"><%= link_to 'Create Note', new_post_path %></div>
 
-                    </div>
-                </div>
                 <div class="flexer">
                     <div  id="c" class="proBox"> <h5 class="phead">Set Deadline</h5></div>
-                    <div  id="a" class="proBox"> <h5 class="phead">Set Active Item Alarm</h5></div>
+                    <div  id="a" class="proBox"> <h5  onclick="alertItem()"class="phead">Set Active Item Alarm</h5></div>
                 </div>
-            <div onclick="addNote()" class="actionBtn"><%= link_to 'Create Note', new_post_path %></div>
     </div>
 </div>
 
@@ -67,26 +66,23 @@
         <script>
             console.log($);
 
-            const addNote = () =>{
-                note = prompt("Creating Note ... What Should the Note Read? ");
-                title = prompt("Title Of Note? ");
-               author= prompt("Author of Note? ");
-               date= prompt("Date/Time?  [optional] ");
-                    
-                createdU = .create(name: author,
-                    title: title, 
-                    author: author,
-                    body: note,
-                    date: date
-                    );
-                
-                $('.mainContainer').append(`<div class='singleJot'> ${createdU} </div>`);
+            const takeJot = () =>{
+                // alert
+                alert(" JOTS - are not saved to DB. If you want to save this content, Please Create NOTE");
+                ask = prompt("Enter Content To Jot ");
+                jot = $('.jotKey').val();
+                $(".mainContainer").append(`<div>${ask}</div>`);
+                $(".mainContainer").append(`<div>${jot}</div>`);
             }
 
-            const takeJot = () =>{
-                alert(" JOTS - are not saved to DB. If you want to save this content, Please Create NOTE");
-                  jot = $('.jotKey').val();
-                  $(".mainContainer").append(`<div><h3>${jot}</h3></div>`)
+            const alertItem = () =>{
+                item=prompt(" Enter Content For Alert Item")
+                                $(".innerContainer").append(`<div style="text-align:center;border:solid lemonchiffon;color:lemonchiffon;">${item}</div>`);
+
+            }
+             const deadline = () =>{
+                prompt(" Enter Content For Alert Item")
+
             }
         </script>
     </body>

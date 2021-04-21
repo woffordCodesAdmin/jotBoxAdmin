@@ -32,6 +32,7 @@
     text-align:center;
     margin:12px;
     width:100%;
+    color:lightcoral;
 
   }
   .mTitle{
@@ -74,19 +75,20 @@
     margin:12px;
   }
   .profileTxtMain{
-    color:lime;
+    color:lightskyblue;
     text-align:center;
   }
   .innerContainer{
     border:solid white;
     margin:2em;
+    padding:22px;
     border-width:.2px;
     height:23vh;
     justify-content: space-between;
     // display:flex;
   }
   .proBox{
-    // border:solid lime;
+    // border:solid lightskyblue;
     border-width:.2px;
     width:40%;
     margin:5%;
@@ -94,28 +96,35 @@
     color:lemonchiffon;
   }
 .actionBtn{
-  border:solid lime;
-  border-width:.2px;
+  border:solid lightskyblue;
   text-align:center;
-  margin-bottom:2em;
-  font-size:28px;
+  margin:2em;
+  font-size:18px;
   color:lemonchiffon;
   width:auto;
+  background-color:salmon;
   text-decoration:none;
 }
 .actionBtn:hover{
-  border:solid lime;
-  border-width:.2px;
+  border:solid lightskyblue;
   text-align:center;
-  margin-top:12px;
+  font-size:18px;
   color:lemonchiffon;
-  width:100%;  
   text-decoration:none;
+  margin:2em;
 
 }
 .phead{
   border:solid white;
   border-width:.2px;
+  padding:2px;
+  background-color:green;
+}
+.phead:hover{
+  border:solid white;
+  border-width:.2px;
+  padding:2px;
+  background-color:salmon;
 }
 .mainContainer{
   // border:solid blue;
@@ -146,8 +155,8 @@
   }
 }
 .motto{
-  font-family: cursive;
-  color:grey;
+  font-family: 'Courier New', Courier, monospace;
+  color:salmon;
   animation: rookieMove ease-in 18s infinite;
 }
 .btnHold{
@@ -174,14 +183,15 @@
   color:lemonchiffon;
 }
 .greatContainer{
-  color:lime;
+  color:lightskyblue;
   text-align:center;
-  margin:2em;
+  margin-top:2em;
 }
 table{
-  border:solid lime;
+  border:solid lightskyblue;
   border-width:.2px;
   width:100%;
+  
 }
 
 .actNput{
@@ -190,3 +200,4 @@ table{
 .flexer{
   display:flex;
 }
+
