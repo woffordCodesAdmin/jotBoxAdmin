@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NoteTakersAnon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="background-size:cover;background-color:black;font-family:serif;">
+    
+    <div class="profileContainer">
+        <h3 class="profileTxtMain"> Welcome To Your [Note] Dashboard</h3>
+        <p class="motto">...its your idea ., just write it down. </p>
+        <img style="width:100%;height:auto;" src="https://images.unsplash.com/photo-1612641605722-60c66c66530c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNrZXRjaHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+        
+        <div class="greatContainer">
+        <h3 > Note(s) Ledger </h3>
+
+        <table>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date</th>
+            <th>Body</th>
+            <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @posts.each do |post| %>
+            <tr>
+                <td><%= post.title %></td>
+                <td><%= post.author %></td>
+                <td><%= post.date %></td>
+                <td><%= post.body %></td>
+                <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            <% end %>
+        </tbody>
+        </table>
+</div>
+
+                <div class="innerContainer">
+                    <div id="a"class="proBox"> <h5 class="phead">Urgent</h5></div>
+                    <img  style="margin-top:4%;height:90px;"src="https://cdna.artstation.com/p/assets/images/images/020/518/064/original/christopher-royse-deskmate-pencils-icon-hi-res.gif?1568088122">
+                    <div  id="c" class="proBox"> <h5 class="phead">Random </h5></div>
+                </div>
+
+            <div onclick="addNote()" class="actionBtn"><%= link_to 'Create Note', new_post_path %></div>
+    </div>
+</div>
+
+<div class="mainContainer"></div>
+        <input class="jotKey" placeholder="Type Content For Quick Jot "> <button onclick="takeJot()" style="background-color:green;width:100%;">Add To Pad </button>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            console.log($);
+
+            const addNote = () =>{
+                note = prompt("Creating Note ... What Should the Note Read? ");
+                title = prompt("Title Of Note? ");
+               author= prompt("Author of Note? ");
+               date= prompt("Date/Time?  [optional] ");
+                    
+                createdU = .create(name: author,
+                    title: title, 
+                    author: author,
+                    body: note,
+                    date: date
+                    );
+                
+                $('.mainContainer').append(`<div class='singleJot'> ${createdU} </div>`);
+            }
+
+            const takeJot = () =>{
+                alert(" JOTS - are not saved to DB. If you want to save this content, Please Create NOTE");
+                  jot = $('.jotKey').val();
+                  $(".mainContainer").append(`<div><h3>${jot}</h3></div>`)
+            }
+        </script>
+    </body>
+</html>

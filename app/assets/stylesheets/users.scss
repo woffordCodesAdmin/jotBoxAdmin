@@ -66,3 +66,121 @@
     -webkit-box-shadow: 3px 5px 8px 2px #3B95FF; 
     box-shadow: 3px 5px 8px 2px #3B95FF;
   }
+  .profileContainer{
+    // border:solid yellow;
+    border-width:.2px;
+    padding:8px;
+    height:auto;
+    margin:12px;
+  }
+  .profileTxtMain{
+    color:lime;
+    text-align:center;
+  }
+  .innerContainer{
+    border:solid white;
+    margin:2em;
+    border-width:.2px;
+    height:23vh;
+    justify-content: space-between;
+    display:flex;
+  }
+  .proBox{
+    // border:solid lime;
+    border-width:.2px;
+    width:40%;
+    margin:5%;
+    text-align:center;
+    color:lemonchiffon;
+  }
+.actionBtn{
+  border:solid lime;
+  border-width:.2px;
+  text-align:center;
+  margin-bottom:2em;
+  font-size:28px;
+  color:lemonchiffon;
+  width:auto;
+  text-decoration:none;
+}
+.actionBtn:hover{
+  border:solid lime;
+  border-width:.2px;
+  text-align:center;
+  margin-top:12px;
+  color:lemonchiffon;
+  width:100%;  
+  text-decoration:none;
+
+}
+.phead{
+  border:solid white;
+  border-width:.2px;
+}
+.mainContainer{
+  // border:solid blue;
+  border-radius:22px;
+  display:flex;
+  border-width:.2px;
+  height:42vh;
+  padding-top:43px;
+  padding-left:93px;
+  margin-bottom:18px;
+  background-image: url('https://cdn.hipwallpaper.com/i/34/85/9TWbka.jpg');
+  background-size:cover;
+}
+.singleJot{
+ color:#333C3F;
+   margin-left:22%
+}
+.flyPen{
+  height:120px;
+}
+@keyframes rookieMove {
+  from {
+    transform: translateX(110%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+.motto{
+  font-family: cursive;
+  color:grey;
+  animation: rookieMove ease-in 8s infinite;
+}
+.btnHold{
+  border:solid red;
+  padding:4px;
+  width:30%;
+  justify-content: space-around;
+  // display: flex;
+}
+.scrnHold{
+  border:solid red;
+  padding:4px;
+  width:60%;
+  justify-content: space-around;
+  // display: flex;
+}
+.chooseBtn{
+  margin:6px;
+  color:lightblue;
+  border:solid salmon;
+  background-color:grey;
+}
+.jotKey{
+  color:lemonchiffon;
+}
+.greatContainer{
+  color:lime;
+  text-align:center;
+  margin:2em;
+}
+table{
+  border:solid lime;
+  border-width:.2px;
+  width:100%;
+}
+
