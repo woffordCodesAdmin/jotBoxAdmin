@@ -112,19 +112,20 @@
   color:lemonchiffon;
   text-decoration:none;
   margin:2em;
-
 }
 .phead{
   border:solid white;
   border-width:.2px;
   padding:2px;
   background-color:green;
+  font-size:15px;
 }
 .phead:hover{
   border:solid white;
   border-width:.2px;
   padding:2px;
   background-color:salmon;
+  font-size:15px;
 }
 .mainContainer{
   // border:solid blue;
@@ -147,7 +148,7 @@
 }
 @keyframes rookieMove {
   from {
-    transform: translateX(110%);
+    transform: translateX(6%);
   }
 
   to {
